@@ -1,0 +1,99 @@
+/* Estilos generales */
+body {
+    font-family: 'Arima', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-size: 16px; /* Aumentar el tamaño de la fuente base */
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en dispositivos pequeños */
+    margin: 0 auto;
+    max-width: 1200px;
+    justify-content: space-between; /* Espacio entre la barra lateral y el contenido */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 100%; /* Ancho de la barra lateral en pantalla grande */
+    min-width: 300px; /* Ancho mínimo para evitar que sea demasiado estrecho */
+    padding: 20px;
+    background-color: #333; /* Color de fondo de la barra lateral */
+    color: white;
+    margin-bottom: 20px; /* Espacio entre la barra lateral y el contenido */
+}
+
+/* Resto de tus estilos */
+h1 {
+    font-size: 2.5rem; /* Aumentar el tamaño de la fuente para los encabezados */
+    color: #333;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 2rem; /* Aumentar el tamaño de la fuente para los subencabezados */
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem; /* Aumentar el tamaño de la fuente para los párrafos */
+    color: white;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+li {
+    font-size: 1.2rem; /* Aumentar el tamaño de la fuente para los elementos de lista */
+    color: #666;
+    margin-bottom: 5px;
+}
+
+/* Estilos específicos para imágenes */
+.carreraFondo {
+    width: 100%;
+    height: 50vw;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    position: initial;
+    top: 0;
+    left: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* En dispositivos con un ancho de pantalla máximo de 768px */
+    .container {
+        flex-direction: column; /* Apilar elementos en dispositivos móviles */
+    }
+
+    .sidebar {
+        width: 100%; /* Barra lateral ocupa el 100% del ancho en dispositivos móviles */
+        order: 1; /* Cambia el orden de la barra lateral para que aparezca después del contenido */
+    }
+}
