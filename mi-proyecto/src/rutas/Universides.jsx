@@ -31,15 +31,15 @@ export const Facultad = () => {
                         <p className='textoU'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis perspiciatis, nisi esse voluptatibus eveniet adipisci consequatur totam nemo id enim repellendus a facilis, eaque asperiores minus veniam molestiae quam suscipit.Una breve descripción de la Universidad 1.</p>
                     </a>
 
-                    <a href="https://www.universidad2.com" target="_blank" className="cardU">
-                        <img src="https://via.placeholder.com/150" alt="Universidad 2" />
+                    <a href="https://cba.ucb.edu.bo/" target="_blank" className="cardU">
+                        <img src={ImagenesApp.imgCatolica}  height="100px" width="80px" alt="Universidad 2" />
                         <h2>Universidad Catolica Boliviana</h2>
                         <p className='textoU'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam et earum aspernatur consectetur expedita accusamus a illo odit temporibus, debitis eligendi eos dolorem? Ullam beatae itaque error quibusdam, quam amet?Una breve descripción de la Universidad 2.</p>
                     </a>
 
-                    <a href="https://www.universidad2.com" target="_blank" className="cardU">
-                        <img src="https://via.placeholder.com/150" alt="Universidad 2" />
-                        <h2>Universidad 2</h2>
+                    <a href="https://www.univalle.edu/" target="_blank" className="cardU">
+                        <img src={ImagenesApp.imgUnivalle} height="100px" width="80px" alt="Universidad 2" />
+                        <h2>Univalle</h2>
                         <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam et earum aspernatur consectetur expedita accusamus a illo odit temporibus, debitis eligendi eos dolorem? Ullam beatae itaque error quibusdam, quam amet?Una breve descripción de la Universidad 2.</p>
                     </a>
 

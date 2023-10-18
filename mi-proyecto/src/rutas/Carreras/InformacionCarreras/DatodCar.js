@@ -20,55 +20,24 @@ const carrerasData = [
         'Desarrollo de software embebido',
       ],
       materias: [
-        'Programación avanzada',
-        'Diseño de algoritmos',
-        'Base de datos',
-        'Arquitectura de software',
-        'Pruebas de software',
+        'Anatomía Humana',
+        'Histología ',
+        'Embriología ',
+        'Genética ',
+        'Soporte Básico de la vida ',
+        'Medicina Social'
       ],
       universidades: [
-        'Universidad ABC',
-        'Universidad XYZ',
-        'Universidad 123',
-        'Universidad ABCD',
-        'Universidad XYZA',
+        'Univalle ',
+        'Universidad Privada Abierta Latinoamericana (UPAL)',
+        'UNIFRANZ',
+        'UNITEPC',
+        'Universidad Latinoamericana (ULAT)',
+        'UNICEN',
+        'Universidad Mayor de San Simón (UMSS)'
       ],
       imagen: ImagenesApp.imgInginieriaSistemas,
-    },
-    {
-        id: 2,
-        nombre: 'Diseño grafico',
-        descripcion: 'La Ingeniería de Software es una disciplina que se enfoca en el diseño, desarrollo y mantenimiento de software de calidad...',
-        lugaresDeTrabajo: [
-          'Empresas de tecnología',
-          'Empresas de servicios financieros',
-          'Empresas de salud',
-          'Organizaciones gubernamentales',
-          'Empresas de desarrollo de videojuegos',
-        ],
-        areasDeTrabajo: [
-          'Desarrollo de aplicaciones web',
-          'Desarrollo de aplicaciones móviles',
-          'Seguridad informática',
-          'Inteligencia artificial',
-          'Desarrollo de software embebido',
-        ],
-        materias: [
-          'Programación avanzada',
-          'Diseño de algoritmos',
-          'Base de datos',
-          'Arquitectura de software',
-          'Pruebas de software',
-        ],
-        universidades: [
-          'Universidad ABC',
-          'Universidad XYZ',
-          'Universidad 123',
-          'Universidad ABCD',
-          'Universidad XYZA',
-        ],
-        imagen: ImagenesApp.imgComunicacion,
-      }
+    }
     // Agregar más carreras aquí...
   ];
   

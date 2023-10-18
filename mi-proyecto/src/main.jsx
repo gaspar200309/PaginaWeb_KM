@@ -16,7 +16,6 @@ root.render(
     <React.StrictMode>
       <App2></App2>
       <PieDePagina></PieDePagina>
-      
     </React.StrictMode>
   </BrowserRouter>
 );

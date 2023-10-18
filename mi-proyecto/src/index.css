@@ -278,11 +278,16 @@ color: var(--blanco);
   }
 }
 .contenido-nosotros{
-  background-color: brown;
+  background-image: url("./assets/img/Fondo.png");
   display: grid;
   grid-template-rows: repeat(2,1fr);
   background-size: cover;
   background-position: center center;
+}
+
+.contenido-nosotros p {
+color: black ;
+
 }
 
 @media(min-width: 768px) {
@@ -354,66 +359,10 @@ color: var(--blanco);
 }
 
 
-/*Facultades */
-
-
-.facultades {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /*background: url('./assets/img/fondosParaPaginasWeb.jgg'); *//* Reemplaza 'tu-imagen-de-fondo.jpg' con la ruta de tu imagen de fondo */
-  background-size: cover;
-  background-position: center;
-  padding: 5px;
-}
-
-.facultad {
-  display: flex;
-  align-content: flex-end;
-  flex-wrap: wrap;
-  margin: 5 px;
-  padding: 5px;
-}
-
-/* Estilos para cada facultad */
-.facultades1 {
-  margin: 10px;
-  padding: 10px;
-  /*background: url('./assets/img/Economia.jg'); *//* Reemplaza 'imagen-de-facultad.jpg' con la ruta de la imagen de la facultad */
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  border: 0.1px solid #ccc;
-  border-radius: 8px;
-  flex-basis: calc(33.33% - 20px); /* 33.33% para mostrar 3 columnas en una fila en pantallas grandes */
-}
-
-/* Estilos para el texto dentro de cada facultad */
-.facultades1 a {
-  text-decoration: none;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  display: block;
-  border-radius: 4px;
-}
-
-/* Estilos responsivos */
-@media screen and (max-width: 768px) {
-  .facultades1 {
-      flex-basis: calc(50% - 20px); /* 50% para mostrar 2 columnas en una fila en pantallas medianas */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .facultades1 {
-      flex-basis: 100%; /* 100% para mostrar 1 columna en una fila en pantallas pequeñas */
-  }
-}
-
 /*Carreras de la universidad mayor de san simon */
 
 .carrera {
+  
   padding-top: 5rem;
 }
 
@@ -669,7 +618,7 @@ a.btn:hover {
   flex: 0 0 calc(50% - 1rem);
 }
 .informacion-contacto{
-  background-color: var(--oscuro);
+  
   padding: 2rem;
 }
 
@@ -694,6 +643,7 @@ a.btn:hover {
 }
 
 .formulario{
+  
   padding: 5rem;
 }
 
@@ -715,6 +665,7 @@ a.btn:hover {
   font-family: var(--parrafos);
 }
 .input-formulario textarea{
+
   height: 20rem;
   resize:none;
 }

@@ -11,8 +11,17 @@ import ingenieriaDemandaCivil from './img/ingenieriaDemandaCivil.jpg'
 import ingineriaSistemas from './img/ingineriaSistemas.jpg'
 import MyProject from './img/MyProject.png'
 import FondoGraduados from './img/FondoGraduados.jpg'
-import FondoInicio from './img/FondoInicio.jpg'
+import FondoInicio from './img/fondo.jpg'
 import Hamburguesa from './img/Hamburguesa.png'
+import Catolica from './img/Catolica.png'
+import Univalle from  './img/Univalle.png'
+import Medicina from './img/Medicina.png'
+import Odontologia from './img/Odontologia.png'
+import Enfermeria from './img/Enfermeria.png'
+import Keneciologia from './img/Keneciologia.png'
+import Bioquimica from './img/Bioquimica.png'
+import Nutricion from './img/Nutricion.jpg'
+
 
 
 export default {
@@ -30,5 +39,13 @@ export default {
   "imgInginieriaSistemas": ingineriaSistemas,
   "imgMyProject": MyProject,
   "imgFondo2": FondoGraduados,
-  "imgHamburguesa": Hamburguesa
+  "imgHamburguesa": Hamburguesa,
+  "imgCatolica": Catolica,
+  "imgUnivalle": Univalle,
+  "imgMedicina": Medicina,
+  "imgOdontologia": Odontologia,
+  "imgEnfermeria": Enfermeria,
+  "imgKeneciologia": Keneciologia,
+  "imgBioquimica": Bioquimica,
+  "imgNutricion": Nutricion
 }

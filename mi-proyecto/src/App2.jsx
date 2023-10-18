@@ -5,7 +5,6 @@ import { Facultad } from "./rutas/Universides"
 import  Carrera  from "./rutas/Carreras/Carrera"
 import { Contacto } from "./rutas/Contacto"
 import { Becas } from "./rutas/Becas"
-import InformacionCarrera  from "./rutas/Carreras/InformacionCarreras/InformacionCarrera"
 import CarrerasPage from "./rutas/Carreras/InformacionCarreras/CarrerasPage"
 
 export const App2 = () => {
