@@ -2,13 +2,9 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import {BrowserRouter} from 'react-router-dom'
 import './index.css';
-import { App2 } from './App2';
+import { App2 } from './App';
 import { PieDePagina } from './rutas/Componentes/PieDePagina';
 
-
-
-
-// Utiliza unstable_createRoot en lugar de createRoot
 const root = createRoot(document.getElementById('root'));
 
 root.render(

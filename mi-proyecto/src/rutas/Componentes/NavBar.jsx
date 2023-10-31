@@ -1,50 +1,48 @@
-import React, { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import ImagenesApp from '../../assets/ImagenesApp';
+import React, { useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
 export const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   useEffect(() => {
-    const menuHamburger = document.querySelector('.menu-hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuHamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('mobile-menu');
-    });
-
-    // Limpieza del evento cuando el componente se desmonta
-    return () => {
-      menuHamburger.removeEventListener('click', () => {
-        navLinks.classList.toggle('mobile-menu');
-      });
-    };
-  }, []);
+    setMenuOpen(false); 
+  }, [location]);
 
   return (
     <header>
       <nav className="navbar">
         <a href="#" className="logo">
-          AVENTURAS
+          AV
         </a>
-        <div className="nav-links">
+        <div className={`nav-links ${menuOpen ? 'mobile-menu' : ''}`}>
           <ul>
-            <li className="active">
-              <NavLink to="/inicio">Inicio</NavLink>
+            <li>
+              <NavLink to="/inicio" activeclassname="active">Inicio</NavLink>
             </li>
-            <li className="active">
-              <NavLink to="/carrera">Carreras</NavLink>
+            <li className='subMenu'>
+              <NavLink to="/carrera" activeclassname="active">Carreras</NavLink>
             </li>
-            <li className="active">
-              <NavLink to="/facultad">Universidades</NavLink>
+            <li>
+              <NavLink to="/facultad" activeclassname="active">Universidades</NavLink>
             </li>
-            <li className="active">
-              <NavLink to="/becas">Becas</NavLink>
+            <li>
+              <NavLink to="/becas" activeclassname="active">Becas</NavLink>
             </li>
-            <li className="active">
-              <NavLink to="/contacto">Contacto</NavLink>
+            <li>
+              <NavLink to="/contacto" activeclassname="active">Contacto</NavLink>
             </li>
           </ul>
         </div>
-        <img src={ImagenesApp.imgHamburguesa} alt="/" className="menu-hamburger" />
+        <span className="menu-hamburger" onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
       </nav>
     </header>
   );

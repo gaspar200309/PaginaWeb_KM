@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Mulish:wght@400;700&family=Open+Sans&family=Poppins:wght@400;500;600;700;800&family=Sofia+Sans+Condensed:wght@100;300;400;600;700;900&display=swap');
+
 :root{
   --oscuro:#07070A;
   --azulOscuro:#0A1128;
@@ -6,8 +8,8 @@
   --blanco:#FEFCFB;
   --rojo: #ee0707;
   --fonfo: #2f2f47;
-  --titulos:'Baloo 2', cursive;
-  --parrafos:'Montserrat', sans-serif;
+  --titulos:'Montserrat' sans-serif
+  --parrafos:'open sans', sans-serif;
 }
 
 html{
@@ -87,8 +89,6 @@ color: var(--blanco);
 }
 @keyframes desplazamiento {
 
-  /*desplazamiento incial*/
-
   0%{
       transform: translateX(-100%);
   }
@@ -98,31 +98,44 @@ color: var(--blanco);
   }
 }
 
-.fondo{
-  height:  100dvh;
+.fondo {
+  margin-top: 90px;
+  height: 77vh;
   width: 100%;
+  
 }
 
-/*encabezado*/
+@media only screen and (max-width: 768px) {
+  .fondo {
+  height: 30vh;
+  width: 100%;
+    background-size: contain; 
+  }
+}
 
 .navbar {
   position: fixed;
   top: 0;
   padding: 25px;
-  background-color: #07070A;
+  background-color: #e9a624;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  z-index: 1000; /* Aumenta el valor de z-index */
+  z-index: 1000;
 }
 
 
 .navbar a {
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 24px;
+}
+
+.navbar a:hover {
+  color: #812110;
 }
 
 .navbar .logo {
@@ -131,6 +144,7 @@ color: var(--blanco);
 }
 
 .navbar .nav-links ul {
+  list-style: none;
   display: flex;
 }
 
@@ -139,6 +153,7 @@ color: var(--blanco);
 }
 
 .navbar .nav-links ul.active a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif ;
   color: #ed3c57;
   font-weight: 600;
 }
@@ -149,6 +164,33 @@ color: var(--blanco);
   top: 50px;
   right: 50px;
   width: 35px;
+}
+/* Estilos para el ícono hamburguesa */
+
+.menu-hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: #c5860b;
+  display: block;
+  position: absolute;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.menu-hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.menu-hamburger span:nth-child(2) {
+  top: 8px;
+}
+
+.menu-hamburger span:nth-child(3) {
+  top: 16px;
+}
+
+.nav-links.mobile-menu {
+  display: block;
 }
 
 
@@ -195,73 +237,15 @@ color: var(--blanco);
   .navbar .nav-links ul li {
       margin: 25px 0;
       font-size: 1.2em;
+      text-decoration: none;
   }
 }
-
-
-
-
-/*contenido del encabezado*/
-
-@media(min-width: 768px ) {
-  .contenido-encabezado {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 85%;
-  }
-  .contenido-encabezado, .formulario-encabezado{
-          flex: 0 0 calc(50% - 1rem);
-  }
-}
-.texto-encabezado h1{
-  font-size: 3rem;
-  text-align: center;
-  color: var(--blanco);
-  padding-top: 8rem;
-}
-@media(min-width: 768px) {
-  .texto-encabezado h1{
-      font-size: 7rem;
-      text-align: left;
-      padding-top: 0;
-  }
-
-}
-
-
-.formulario-encabezado{
-  background-color: var(--blanco);
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-  padding: 5rem;
-  border-radius: .5rem;
-}
-
-.formulario-encabezado h2{
-  font-size: 3rem;
-  text-align: center;
-  margin-top: 0;
-}
-@media(min-width: 768px) {
-  .formulario-encabezado h2{
-      font-size: 3rem;
-  }
-}
-.input-encabezado{
-  margin-bottom: 1rem;
-  width: 100%;
-}
-
-.input-encabezado input{
-  width: 100%;
-  padding: 0 1.6rem;
-  height: 4.8rem;
-  border: 1px solid #f1f1f1;
-  border-radius: .5rem;
-  font-family: var(--parrafos);
-  outline: none;
+a.active {
+  border-bottom: 3px solid #812110;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Cambia la fuente según tus preferencias */
+  color: #812110; /* Cambia el color de fuente cuando está activo */
+  font-weight: 500; /* Cambia el peso de fuente cuando está activo */
+  text-decoration: none; /* Para eliminar la subrayado predeterminado */
 }
 
 
@@ -270,7 +254,9 @@ color: var(--blanco);
 .nosotros h2{
   text-align: center;
   font-size: 4rem;
-  color: var(--azulClaro);
+  padding: 6px;
+  color: #e7302a;
+  font-family:'Montserrat' sans-serif;
 }
 @media(min-width: 768px) {
   .nosotros h2{
@@ -278,7 +264,7 @@ color: var(--blanco);
   }
 }
 .contenido-nosotros{
-  background-color: brown;
+  background-image: url(assets/img/eco.jpg);
   display: grid;
   grid-template-rows: repeat(2,1fr);
   background-size: cover;
@@ -292,7 +278,6 @@ color: var(--blanco);
   }
 }
 
-
 .texto-nosotros{
   padding: 2rem;
   grid-row: 2/3;
@@ -305,278 +290,26 @@ color: var(--blanco);
   }
 }
 
-.texto-nosotros h3{
-  font-size: 4rem;
-  color: var(--azulClaro);
-  text-align: center;
-}
+
 
 .texto-nosotros p{
   font-size: 2.2rem;
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 @media(min-width: 768px) {
   .texto-nosotros p{
       text-align: left;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 }
-
-
-
-/*ventajas*/
-@media(min-width: 768px) {
-  .contenido-ventajas{
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 1rem;
-  }
-}
-.ventajas{
-  padding: 5rem;
-  background-color: var(--azulOscuro);
-}
-
-.ventaja{
-  color: var(--blanco);
-  text-align: center;
-}
-
-.ventaja i{
-  font-size: 4rem;
-}
-
-.ventaja h3{
-  font-size: 2.5rem;
-}
-
-.ventaja p{
-  font-size: 2rem;
-}
-
-
-/*Facultades */
-
-
-.facultades {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /*background: url('./assets/img/fondosParaPaginasWeb.jgg'); *//* Reemplaza 'tu-imagen-de-fondo.jpg' con la ruta de tu imagen de fondo */
-  background-size: cover;
-  background-position: center;
-  padding: 5px;
-}
-
-.facultad {
-  display: flex;
-  align-content: flex-end;
-  flex-wrap: wrap;
-  margin: 5 px;
-  padding: 5px;
-}
-
-/* Estilos para cada facultad */
-.facultades1 {
-  margin: 10px;
-  padding: 10px;
-  /*background: url('./assets/img/Economia.jg'); *//* Reemplaza 'imagen-de-facultad.jpg' con la ruta de la imagen de la facultad */
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  border: 0.1px solid #ccc;
-  border-radius: 8px;
-  flex-basis: calc(33.33% - 20px); /* 33.33% para mostrar 3 columnas en una fila en pantallas grandes */
-}
-
-/* Estilos para el texto dentro de cada facultad */
-.facultades1 a {
-  text-decoration: none;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  display: block;
-  border-radius: 4px;
-}
-
-/* Estilos responsivos */
-@media screen and (max-width: 768px) {
-  .facultades1 {
-      flex-basis: calc(50% - 20px); /* 50% para mostrar 2 columnas en una fila en pantallas medianas */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .facultades1 {
-      flex-basis: 100%; /* 100% para mostrar 1 columna en una fila en pantallas pequeñas */
-  }
-}
-
-/*Carreras de la universidad mayor de san simon */
-
-.carrera {
-  padding-top: 5rem;
-}
-
-.carrera h2{
-  font-size: 5rem;
-  text-align: center;
-  color: var(--azulClaro);
-}
-
-@media(min-width: 768px){
-  .contenido-servicios{
-      display: grid;
-      grid-template-columns:repeat(3.1fr);
-      gap: 4rem;
-  }
-}
-
-.carrera{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  top: 30px;
-  background-color: #e1e1e1;
- 
-}
-.carrera img{
-  background-color: var(--azulClaro);
-  width: 20rem;
-  height: 20rem;
-  border-radius: 11%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blanco);
-  font-size: 3rem;
-  box-shadow: 10px 10px 16px -6px rgba(0,0,0,5);
-  transition: all .3s ease-in-out;
-}
-
-.carrera h4{
-  font-size: 2.2rem;
-  color: #e1e1e1;
-
-}
-.carrera p{
-  font-size: 1.8rem;
-  color: hwb(204 95% 3%);
-  text-align: center;
-  
-}
-
-/* Estilo para el enlace "Saber más" como un botón */
-a.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-a.btn:hover {
-  background-color: #0056b3;
-}
-
-
-
-@media(min-width: 768px) {
-  .carrera p{
-      text-align: left;
-  }
-}
-
-@media(min-width: 768px) {
-  .carrera:hover{
-      cursor: pointer;
-  }
-
-  .carrera:hover .fas {
-      background-color: var(--blanco);
-      color: var(--azulClaro);
-  }
-}
-
-
-
-/*Seccion servicios*/
-.servicios {
-  padding-top: 5rem;
-}
-
-.servicios h2{
-  font-size: 5rem;
-  text-align: center;
-  color: var(--azulClaro);
-}
-
-@media(min-width: 768px) {
-  .contenido-servicios{
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 4rem;
-      
-  }
-}
-
-.servicio{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- 
-}
-.servicio i{
-  background-color: var(--azulClaro);
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blanco);
-  font-size: 3rem;
-  box-shadow: 10px 10px 16px -6px rgba(0,0,0,0.45);
-  transition: all .3s ease-in-out;
-}
-
-.servicio h3{
-  font-size: 2.2rem;
-  color: var(--azulOscuro);
-}
-.servicio p{
-  font-size: 1.8rem;
-  text-align: center;
-}
-
-@media(min-width: 768px) {
-  .servicio p{
-      text-align: left;
-  }
-}
-
-@media(min-width: 768px) {
-  .servicio:hover{
-      cursor: pointer;
-  }
-
-  .servicio:hover .fas {
-      background-color: var(--blanco);
-      color: var(--azulClaro);
-  }
-}
-
-
 
 /*Carreras **/
-/*Cards*/
 .container-card {
   width: 100%;
   display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap to the next line */
-  justify-content: center; /* Center the cards horizontally */
+  flex-wrap: wrap; 
+  justify-content: center; 
   max-width: 1100px;
   margin: auto;
 }
@@ -585,13 +318,13 @@ a.btn:hover {
 	max-width: 1080px;
 	margin: auto;
 	padding: 20px;
-	margin-top: 20px;
+	margin-top: 90px;
 	text-align: center;
-	color: #4d97eb;
+	color: #e7302a;
   font-size: 50px;
 }
 .card {
-  width: calc(33.33% - 40px); /* 33.33% for three columns, minus margin */
+  width: calc(33.33% - 40px);
   margin: 20px;
   border-radius: 6px;
   overflow: hidden;
@@ -615,42 +348,50 @@ a.btn:hover {
 }
 .card .contenido-card h3{
 	margin-bottom: 15px;
-	color: #7a7a7a;
+  font-family: system-ui;
+	color: #892a19;
 }
 .card .contenido-card p{
 	line-height: 1.8;
-	color: #6a6a6a;
+	color: #352d2d;
 	font-size: 14px;
 	margin-bottom: 5px;
+  font-family: 'Open Sans';
 }
 .card .contenido-card a{
 	display: inline-block;
 	padding: 10px;
 	margin-top: 10px;
 	text-decoration: none;
-	color: #2fb4cc;
-	border: 1px solid #2fb4cc;
+	color: #812110;
+	border: 1px solid #812110;
 	border-radius: 4px;
 	transition: all 400ms ease;
 	margin-bottom: 5px;
 }
 .card .contenido-card a:hover{
-	background: #2fb4cc;
+	background: #812110;
 	color: #fff;
+}
+.areas {
+  display: initial;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.5);
 }
 @media only screen and (max-width: 768px) {
   .card {
-    width: calc(50% - 40px); /* Two columns on smaller screens */
+    width: calc(50% - 40px); 
   }
 
   @media only screen and (max-width: 480px) {
     .card {
-      width: calc(100% - 40px); /* Single column on mobile */
+      width: calc(100% - 40px); 
     }
   }
 }
-
-
 
 /*formulario contacto*/
 @media(min-width: 768px) {
@@ -772,17 +513,22 @@ a.btn:hover {
   font-size: 2rem;
 }
 
-
-
 /*Seccion contacto*/
 .contacto{
   padding-top: 5rem;
+  margin-top: 90px;
 
 }
 .contacto h2{
   text-align: center;
-  color: var(--azulClaro);
+  color: #812110;
   font-size: 5rem;
+}
+.contacto p {
+  justify-content: center;
+  text-align: center;
+  font-family: 'Open sans', sans-serif;
+  font-size: 21px;
 }
 
 @media(min-width: 768px) {
@@ -794,11 +540,10 @@ a.btn:hover {
 
 .informacion-contacto{
   background-image: url('./assets/img/Economia.jpg');
+  filter: brightness(50%);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  z-index: -1;
-  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -807,7 +552,7 @@ a.btn:hover {
 }
 @media(min-width: 768px) {
   .informacion-contacto{
-      height: 100vh;
+      height: 70vh;
   }
 }
 .informacion-contacto::before{
@@ -834,8 +579,9 @@ a.btn:hover {
   padding: 5rem;
   display: flex;
   flex-direction: column;
+  height: 70vh;
   justify-content: center;
-  background-color: var(--fonfo);
+  background-color: #49251e;
 }
 
 .input-contacto label{
@@ -864,16 +610,25 @@ a.btn:hover {
   padding: 1rem 3rem;
   transition: background-color .3s ease-in-out;
 }
+.btnC {
+  background-color: #812110;
+  color: #07070A;
+}
+.btnC:hover {
+  color: #07070A;
+}
 
 .input-contacto input[type="submit"]:hover{
   background-color: var(--blanco);
   color: var(--azulClaro);
 }
+.btnF {
+  background-color: #812110;
+}
 
 .footer .logo h2, .footer p{
   text-align: center;
 }
-
 
 @media(min-width: 768px) {
   .footer{
@@ -882,3 +637,37 @@ a.btn:hover {
       justify-content: space-around;
   }
 }
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #9e3636;
+  border-radius: 5px;
+  width: 300px;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #852e2e;
+}
+.search-button {
+  background-color: #852e2e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-button:hover {
+  background-color: #852e2e;
+}
+
+
